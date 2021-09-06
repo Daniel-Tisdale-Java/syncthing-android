@@ -17,24 +17,3 @@ The project is translated on [Transifex](https://www.transifex.com/projects/p/sy
 ## Dev
 
 Language mappings are defined in `.tx/config`, with the second code being the one from transifex. Google play supported languages: https://support.google.com/googleplay/android-developer/table/4419860. Android supported languages: https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android. If a new language is added on transifex that's not supported, add them to `deleteUnsupportedPlayTranslations` in `app/build.gradle`.
-
-# Building
-
-### Dependencies
-- Android SDK (you can skip this if you are using Android Studio)
-- Android NDK (`$ANDROID_NDK_HOME` should point at the root directory of your NDK)
-- Go (see [here](https://docs.syncthing.net/dev/building.html#prerequisites) for the required version)
-- Java Version 11 (you scan skip this if you are using Android Studio, otherwise you might need to set `$JAVA_HOME` accordingly)
-
-### Build instructions
-
-Make sure you clone the project with
-`git clone https://github.com/syncthing/syncthing-android.git --recursive`. Alternatively, run
-`git submodule init && git submodule update` in the project folder.
-
-Build Syncthing using `./gradlew buildNative`. Then use `./gradlew assembleDebug` or
-Android Studio to build the apk.
-
-# License
-
-The project is licensed under the [MPLv2](LICENSE).
